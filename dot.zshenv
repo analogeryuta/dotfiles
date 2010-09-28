@@ -14,10 +14,10 @@ export MACPORT_DIR=/opt/local
 #export PTETEX_DIR=/usr/local/ptetex
 
 #Scalaのインストール先
-export SCALA_DIR=/usr/local/scala-2.7.7.final
+export SCALA_DIR=/usr/local/scala-2.8.0.final
 
 #android SDKのインストール先
-export ANDROID_SDK_DIR=/usr/local/android-sdk-mac
+export ANDROID_SDK_DIR=/usr/local/android-sdk-mac_x86
 
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man:$MACPORT_DIR/man:$SCALA_DIR/man
