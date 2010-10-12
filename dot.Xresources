@@ -39,23 +39,30 @@ URxvt.termName: rxvt-256color
 URxvt.foreground: Black
 URxvt.background: White
 URxvt.saveLines: 10000
+URxvt.lineSpace: 0
 URxvt.scrollstyle: next
-URxvt.scrollBar_right: true
+URxvt.scrollBar_right: false
 URxvt.geometry: 80x25
 URxvt.fading: 10
 URxvt.shading: 30
- 
+
 URxvt.font:\
-    xft:Monaco:style=Regular-Mono:size=9:antialias=true,
-    xft:OsakaMono:style=Regular-Mono:size=12:antialias=true
+    xft:VL Gothic:style=Regular:size=10:antialias=true,\
+    xft:IPAGothic:style=Regular,\
+    xft:Menlo:style=Normal
 URxvt.boldFont:\
-    xft:Monaco:bold,\
-    xft:OsakaMono:style=Regular-Mono:bold
+    xft:VL Gothic:style=Regular,\
+    xft:IPAGothic:style=Regular,\
+    xft:Menlo:style=Bold
 URxvt.italicFont:\
-    xft:Monaco:italic,\
-    xft:OsakaMono:style=Regular-Mono:italic
+    xft:VL Gothic:style=Regular,\
+    xft:IPAGothic:style=Regular,\
+    xft:Menlo:style=Italic
 URxvt.boldItalicFont:\
-    xft:Monaco:italic,\
-    xft:OsakaMono:style=Regular-Mono:italic
+    xft:VL Gothic:style=Regular,\
+    xft:IPAGothic:style=Regular,\
+    xft:Menlo:style=Bold Italic
+
+Xft*antialias: true
 
 Kinput2.ConversionStartKeys: Shift<Key>space
