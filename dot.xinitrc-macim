@@ -22,8 +22,8 @@ fi
 sleep 2
 
 ## urxvtd(rxvt-unicodeのdaemon mode)を起動
-urxvtd -q -f -o &
-sleep 1
+#urxvtd -q -f -o &
+#sleep 1
 
 ## kinput2の設定
 #export XMODIFIERS="@im=kinput2"
