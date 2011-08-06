@@ -43,6 +43,11 @@ alias editrst='$EDITOR `date +%Y%m%d`.rst'
 if [[ -f /usr/local/bin/less ]]; then
     alias less="/usr/local/bin/less"
 fi
+if [[ -f /usr/local/bin/grep ]]; then
+    alias grep="/usr/local/bin/grep"
+    alias egrep="/usr/local/bin/egrep"
+    alias fgrep="/usr/local/bin/fgrep"
+fi
 if [[ -f /usr/local/bin/emacs ]]; then
     alias emacs="/usr/local/bin/emacs"
     alias etags="/usr/local/bin/etags"
