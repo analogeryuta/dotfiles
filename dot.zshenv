@@ -11,17 +11,17 @@ export PAGER=less
 #export MACPORT_DIR=/opt/local
 
 #Scalaのインストール先
-export SCALA_DIR=/usr/local/scala-2.9.0.final
+export SCALA_DIR=/usr/local/scala-2.9.2
 
 #android SDKのインストール先
-export ANDROID_SDK_DIR=/usr/local/android-sdk-mac_x86
+export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
 
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
 
-#path=($path /usr/local/bin)
+path=(/usr/local/bin $path)
 #path=($path /usr/X11/bin)
-export PATH=$PATH:$ANDROID_SDK_DIR/tools:$SCALA_DIR/bin:~/bin
+export PATH=$PATH:$ANDROID_SDK_DIR/tools:$ANDROID_SDK_DIR/platform-tools:$SCALA_DIR/bin:~/bin
 
 # Xログインの設定
 #export DISPLAY=":0.0"
