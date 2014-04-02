@@ -49,7 +49,7 @@ if [[ -f /usr/local/bin/grep ]]; then
     alias fgrep="/usr/local/bin/fgrep"
 fi
 if [[ -f /usr/local/bin/emacs ]]; then
-    alias emacs="/usr/local/bin/emacs"
+    alias emacs="/usr/local/bin/emacs -nw"
     alias etags="/usr/local/bin/etags"
 fi
 if [[ -f /usr/local/bin/vim ]]; then
