@@ -38,6 +38,10 @@
 	"Set 'ansi-color-for-comint-mode' to t." t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
+;;; for windows setting
+(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key [backspace] 'delete-backward-char)
+
 ;;; フォントに色をつけない。
 (global-font-lock-mode nil)
 
@@ -47,9 +51,9 @@
 ;;; javascript modeでのインデント幅を変更. 2文字分のスペースへ
 (setq js-indent-level 2)
 
-;;; for windows setting
-(global-set-key "\C-h" 'delete-backward-char)
-(global-set-key [backspace] 'delete-backward-char)
+;;; org mode (拡張子が".org")でひらく
+(setq auto-mode-alist
+      (cons (cons "\\.org$" 'org-mode) auto-mode-alist))
 
 ;;このファイルに間違いがあった場合に全てを無効にする。
 (put 'eval-expression 'disabled nil)
