@@ -8,14 +8,15 @@ export LC_MESSAGES=C
 export PAGER=less
 
 #for cygwin settings
-export CYGROOT=/cygdrive/c
+#export CYGROOT=/cygdrive/c
 
 #for vagrant settings
 export http_proxy="http://proxy.occ.co.jp:8080"
 export https_proxy="http://proxy.occ.co.jp:8080"
-export VAGRAND_PATH=$CYGROOT/HashiCorp/Vagrant/bin
-export PACKER_PATH=$CYGROOT/HashiCorp/Packer
-export VBOX_PATH=$CYGROOT/Program\ Files/Oracle/VirtualBox
+#export VAGRAND_PATH=$CYGROOT/HashiCorp/Vagrant/bin
+#export PACKER_PATH=$CYGROOT/HashiCorp/Packer
+export PACKER_PATH=$HOME/bin/Packer
+#export VBOX_PATH=$CYGROOT/Program\ Files/Oracle/VirtualBox
 export RENV_PATH=$HOME/.rbenv/bin
 
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
@@ -46,9 +47,9 @@ export HG_ROOT=""
 #for github's git setup
 export GIT_ROOT="git@github.com:analogeryuta"
 
-export PATH="/home/akamine/.rbenv/shims:${PATH}"
+export PATH="/home/y-akamine/.rbenv/shims:${PATH}"
 export RBENV_SHELL=zsh
-source '/home/akamine/.rbenv/libexec/../completions/rbenv.zsh'
+source '/home/y-akamine/.rbenv/libexec/../completions/rbenv.zsh'
 rbenv rehash 2>/dev/null
 rbenv() {
   local command
