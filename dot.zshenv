@@ -1,6 +1,6 @@
 ## zsh settings ##
 
-#utf8の設定
+#utf8 setting
 export LANG=ja_JP.UTF-8
 export LC_TIME=C
 export LC_MESSAGES=C
@@ -17,26 +17,27 @@ export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
 # Install path to Go
 export GO_DIR=/usr/local/go
 
-#Packer(Vagrant Boxのパッケージツール)のインストール先
-export PACKER_DIR=~/bin/0.6.0_darwin_amd64
+#Install path to Packer
+export PACKER_DIR=$HOME/bin/0.6.0_darwin_amd64
 
-export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
-/usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
-
-#path=(/usr/local/bin $path)
-#path=($path /usr/X11/bin)
+#Install path settings
 export PATH=$PATH:$ANDROID_SDK_DIR/tools:\
 $ANDROID_SDK_DIR/platform-tools:$GO_DIR/bin:\
-$SCALA_DIR/bin:~/bin:$PACKER_DIR
+$SCALA_DIR/bin:\
+$HOME/bin:$PACKER_DIR
+
+#man path settings
+export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
+/usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
 
 # X login settings
 #export DISPLAY=":0.0"
 
-#for cr's CVS and SVN setup
-export CVS_RSH=ssh
-export CVS_ROOT=""
-export CVSEDITOR="emacs -nw"
-export CVSIGNORE=".svn .deps .libs .DS_Store"
+#for proxy environment settings
+export http_proxy=""
+export https_proxy=""
+
+#for SVN setup
 export SVNEDITOR="emacs -nw"
 export SVNROOT=""
 
@@ -47,10 +48,12 @@ export HG_ROOT=""
 export GIT_ROOT="git@github.com:analogeryuta"
 
 #for rbenv setting
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="/Users/freddie/.rbenv/shims:${PATH}"
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
+source $HOME/.rbenv/completions/rbenv.zsh
 export RBENV_SHELL=zsh
-source '/Users/freddie/.rbenv/libexec/../completions/rbenv.zsh'
+
+# rbenv command wrapper
 rbenv rehash 2>/dev/null
 rbenv() {
   local command

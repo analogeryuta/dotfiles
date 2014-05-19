@@ -1,0 +1,10 @@
+[user]
+	name = Yuta, AKAMINE
+	email = analogeryuta1984@gmail.com
+[cuser]
+	email = analogeryuta1984@gmail.com
+[core]
+	excludesfile = $HOME/.gitignore
+	editor = emacs
+[color]
+	ui = auto
