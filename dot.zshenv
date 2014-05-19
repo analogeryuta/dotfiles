@@ -18,7 +18,7 @@ export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
 export GO_DIR=/usr/local/go
 
 #Packer(Vagrant Boxのパッケージツール)のインストール先
-export PACKER_DIR=~/bin/0.5.2_darwin_amd64
+export PACKER_DIR=~/bin/0.6.0_darwin_amd64
 
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
