@@ -26,11 +26,11 @@ $ANDROID_SDK_DIR/platform-tools:$GO_DIR/bin:\
 $SCALA_DIR/bin:\
 $HOME/bin:$PACKER_DIR
 
-#man path settings
+#Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
 
-# X login settings
+#X login settings
 #export DISPLAY=":0.0"
 
 #for proxy environment settings
@@ -41,7 +41,7 @@ export https_proxy=""
 export SVNEDITOR="emacs -nw"
 export SVNROOT=""
 
-#for cr's mercurial setup
+#for mercurial setup
 export HG_ROOT=""
 
 #for github's git setup
