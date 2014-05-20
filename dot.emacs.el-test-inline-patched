@@ -1,6 +1,0 @@
-;; inline input patchの動作確認用。
-(setq default-input-method "MacOSX")
-
-;; Carbon Emacs ウィンドウ透過度の設定
-(add-to-list 'default-frame-alist'(active-alpha . 1.0))
-(add-to-list 'default-frame-alist'(inactive-alpha . 0.5))
