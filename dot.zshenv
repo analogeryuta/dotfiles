@@ -18,7 +18,7 @@ export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
 export GO_DIR=/usr/local/go
 
 #Install path to Packer
-export PACKER_DIR=$HOME/bin/0.6.0_darwin_amd64
+export PACKER_DIR=$HOME/bin/Packer
 
 #Install path settings
 export PATH=$PATH:$ANDROID_SDK_DIR/tools:\
@@ -34,8 +34,8 @@ export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 #export DISPLAY=":0.0"
 
 #for proxy environment settings
-export http_proxy=""
-export https_proxy=""
+export http_proxy="http://proxy.occ.co.jp:8080"
+export https_proxy="http://proxy.occ.co.jp:8080"
 
 #for SVN setup
 export SVNEDITOR="emacs -nw"
