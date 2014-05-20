@@ -55,5 +55,9 @@
 (setq auto-mode-alist
       (cons (cons "\\.org$" 'org-mode) auto-mode-alist))
 
+;;; ruby-mode (拡張子が".rake")でひらく
+(setq auto-mode-alist
+      (cons (cons "\\.rake$" 'ruby-mode) auto-mode-alist))
+
 ;;このファイルに間違いがあった場合に全てを無効にする。
 (put 'eval-expression 'disabled nil)
