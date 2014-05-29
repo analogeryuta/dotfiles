@@ -59,5 +59,13 @@
 (setq auto-mode-alist
       (cons (cons "\\.rake$" 'ruby-mode) auto-mode-alist))
 
+;;; ruby-mode (ファイル名が"Rakefile")でひらく
+(setq auto-mode-alist
+      (cons (cons "Rakefile" 'ruby-mode) auto-mode-alist))
+
+;;; ruby-mode (ファイル名が"Capfile")でひらく
+(setq auto-mode-alist
+      (cons (cons "Capfile" 'ruby-mode) auto-mode-alist))
+
 ;;このファイルに間違いがあった場合に全てを無効にする。
 (put 'eval-expression 'disabled nil)
