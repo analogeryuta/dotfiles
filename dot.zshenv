@@ -15,14 +15,14 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
 
 # Install path to Go
-export GO_DIR=/usr/local/go
+export GOPATH=/usr/local/go
 
 #Install path to Packer
 export PACKER_DIR=$HOME/bin/Packer
 
 #Install path settings
 export PATH=$PATH:$ANDROID_SDK_DIR/tools:\
-$ANDROID_SDK_DIR/platform-tools:$GO_DIR/bin:\
+$ANDROID_SDK_DIR/platform-tools:$GOPATH/bin:\
 $SCALA_DIR/bin:\
 $HOME/bin:$PACKER_DIR
 
