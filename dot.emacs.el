@@ -17,11 +17,11 @@
 
 ;;; 言語環境の指定
 (set-language-environment "Japanese")
-(set-default-coding-systems 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(set-terminal-coding-system 'utf-8-unix)
 (set-buffer-file-coding-system 'utf-8-unix)
-(set-clipboard-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8-unix)
 
 ;;; 一行が 80 字以上になった時には自動改行する
 (setq fill-column 80)
@@ -37,10 +37,6 @@
 (autoload 'ansi-color-for-comint-mode-on "ansi-color"
 	"Set 'ansi-color-for-comint-mode' to t." t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-;;; for windows setting
-(global-set-key "\C-h" 'delete-backward-char)
-(global-set-key [backspace] 'delete-backward-char)
 
 ;;; フォントに色をつけない。
 (global-font-lock-mode nil)

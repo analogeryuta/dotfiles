@@ -8,6 +8,9 @@ export LC_MESSAGES=C
 export PAGER=less
 export EDITOR='emacs -nw'
 
+# Install path to JDK(for Linux)
+export JDK_DIR=/usr/local/jdk1.7.0_71
+
 # Install path to Scala
 export SCALA_DIR=/usr/local/scala-2.9.2
 
@@ -23,7 +26,7 @@ export PACKER_DIR=$HOME/bin/Packer
 #Install path settings
 export PATH=$PATH:$ANDROID_SDK_DIR/tools:\
 $ANDROID_SDK_DIR/platform-tools:$GOPATH/bin:\
-$SCALA_DIR/bin:\
+$SCALA_DIR/bin:$JDK_DIR/bin:\
 $HOME/bin:$PACKER_DIR
 
 #Man path settings
