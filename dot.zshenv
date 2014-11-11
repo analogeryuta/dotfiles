@@ -14,31 +14,27 @@ export JDK_DIR=/usr/local/jdk1.7.0_71
 # Install path to Scala
 export SCALA_DIR=/usr/local/scala-2.9.2
 
-# Install path to Android SDK
-export ANDROID_SDK_DIR=/usr/local/android-sdk-macosx
-
 # Install path to Go
-export GOPATH=$HOME/.gocode
+export GOPATH=$HOME/.go
 
 #Install path to Packer
 export PACKER_DIR=$HOME/bin/Packer
 
 #Install path settings
-export PATH=$PATH:$ANDROID_SDK_DIR/tools:\
-$ANDROID_SDK_DIR/platform-tools:$GOPATH/bin:\
-$SCALA_DIR/bin:$JDK_DIR/bin:\
+export PATH=$PATH:$GOPATH/bin:\
+$JDK_DIR/bin:\
 $HOME/bin:$PACKER_DIR
 
 #Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
-/usr/X11/man:/usr/X11/share/man:$SCALA_DIR/man
+/usr/X11/man:/usr/X11/share/man
 
 #X login settings
 #export DISPLAY=":0.0"
 
 #for proxy environment settings
-export http_proxy="http://proxy.occ.co.jp:8080"
-export https_proxy="http://proxy.occ.co.jp:8080"
+#export http_proxy="http://proxy.occ.co.jp:8080"
+#export https_proxy="http://proxy.occ.co.jp:8080"
 
 #for SVN setup
 export SVNEDITOR="emacs -nw"
