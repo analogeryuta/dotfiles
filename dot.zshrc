@@ -24,10 +24,25 @@ fi
 #プロンプトの表示
 #深さ4以上のディレクトリは省略([login:~/.../current] user %)
 setopt prompt_subst
-PROMPT='[%n:%(4~,%-1~/.../%1~,%~)]%% '
+PROMPT='[%n:%(2~,%-1~/.../%1~,%~)]%% '
 
-#右側のプロンプト
-RPROMPT=$'%{\e[31m%}<%t>%{\e[m%}'
+#右側のプロンプトに時計表示
+#RPROMPT=$'%{\e[31m%}<%t>%{\e[m%}'
+
+#setting for vcs(git) infomations.
+RPROMPT=""
+
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+
+precmd () { vcs_info }
+
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 #プロンプトのカラー表示を有効
 autoload -U colors
