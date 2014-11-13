@@ -42,6 +42,9 @@
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key [backspace] 'delete-backward-char)
 
+;; インデントにtab を使わない
+(setq-default tab-width 2 indent-tabs-mode nil)
+
 ;;; フォントに色をつけない。
 (global-font-lock-mode nil)
 
