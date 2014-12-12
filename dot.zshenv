@@ -33,8 +33,12 @@ export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 #export DISPLAY=":0.0"
 
 #for proxy environment settings
-#export http_proxy="http://proxy.occ.co.jp:8080"
-#export https_proxy="http://proxy.occ.co.jp:8080"
+export http_proxy="http://proxy.occ.co.jp:8080"
+export https_proxy="http://proxy.occ.co.jp:8080"
+
+#for gyazo setting at work
+export GYAZO_HOST="gyazo.es.occ.co.jp"
+export GYAZO_CGI_PATH="/"
 
 #for SVN setup
 export SVNEDITOR="emacs -nw"
