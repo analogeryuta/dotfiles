@@ -54,6 +54,7 @@ alias ls="ls -FGv"
 alias df="df -m"
 alias du="du -h"
 alias editrst='$EDITOR `date +%Y%m%d`.rst'
+alias open="x-www-browser"
 
 if [[ -f /usr/local/bin/less ]]; then
     alias less="/usr/local/bin/less"
