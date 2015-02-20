@@ -33,6 +33,33 @@
 (global-set-key "\M-r" 'replace-string)
 (global-set-key "\C-x\C-m" 'buffer-menu)
 
+;;----------------------------------------
+;; 全角スペースとタブを可視化
+;;
+;;   ref. http://d.hatena.ne.jp/syohex/20110119/1295450495
+;;----------------------------------------
+(require 'whitespace)
+(setq whitespace-style '(face tabs tab-mark spaces space-mark))
+(setq whitespace-display-mappings
+      '((space-mark ?\x3000 [?\u25a1])
+	(tab-mark  ?\t  [?\xBB ?\t] [?\\ ?\t])))
+(setq whitespace-space-regexp "\\(\x3000+\\)")
+(setq-default show-trailing-whitespace t)
+
+(set-face-foreground  'whitespace-tab "#700000")
+(set-face-background  'whitespace-tab 'nil)
+(set-face-underline   'whitespace-tab t)
+(set-face-foreground  'whitespace-space "#700000")
+(set-face-background  'whitespace-space 'nil)
+(set-face-background  'trailing-whitespace "purple4")
+(global-whitespace-mode 1)
+
+;;----------------------------------------
+;; 検索でマッチした箇所をハイライト表示
+;;----------------------------------------
+(setq search-highlight t)
+
+
 ;;; threat escape sequence
 (autoload 'ansi-color-for-comint-mode-on "ansi-color"
 	"Set 'ansi-color-for-comint-mode' to t." t)
