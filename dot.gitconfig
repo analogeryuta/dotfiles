@@ -5,7 +5,7 @@
 	email = analogeryuta1984@gmail.com
 [core]
 	excludesfile = $HOME/.gitignore
-	editor = emacs
+	editor = emacs -nw
 [color]
 	ui = auto
 [filter "media"]
