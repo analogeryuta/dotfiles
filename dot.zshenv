@@ -18,9 +18,12 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 export GOPATH=$HOME/.go
 
 # Install path to Packer
-export PACKER_DIR=$HOME/bin/Packer
+export PACKER_DIR=$HOME/bin/packer
 
-# Packer(for OSX) setting.
+# Install path to Terraform
+export TERRAFORM_DIR=$HOME/bin/terraform
+
+# Docker(for OSX) setting.
 if [[ `uname` == 'Darwin' ]]; then
    export DOCKER_HOST=tcp://192.168.59.103:2376
    export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
@@ -30,7 +33,7 @@ fi
 # Install path settings
 export PATH=$PATH:$GOPATH/bin:\
 $JDK_DIR/bin:\
-$HOME/bin:$PACKER_DIR
+$HOME/bin:$PACKER_DIR:$TERRAFORM_DIR
 
 # Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
