@@ -83,3 +83,6 @@ elif [[ $LANG == "ja_JP.eucJP" ]]; then
     alias javac="javac -J-Dfile.encoding=euc-jp"
     alias java="java -Dfile.encoding=euc-jp"
 fi
+
+#for direnv setting.
+eval "$(direnv hook zsh)"
