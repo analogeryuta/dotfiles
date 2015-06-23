@@ -1,6 +1,6 @@
 ## zsh settings ##
 
-#utf8 setting
+# utf8 setting
 export LANG=ja_JP.UTF-8
 export LC_TIME=C
 export LC_MESSAGES=C
@@ -17,15 +17,22 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 # Install path to Go
 export GOPATH=$HOME/.go
 
-#Install path to Packer
+# Install path to Packer
 export PACKER_DIR=$HOME/bin/Packer
 
-#Install path settings
+# Packer(for OSX) setting.
+if [[ `uname` == 'Darwin' ]]; then
+   export DOCKER_HOST=tcp://192.168.59.103:2376
+   export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+   export DOCKER_TLS_VERIFY=1
+fi
+
+# Install path settings
 export PATH=$PATH:$GOPATH/bin:\
 $JDK_DIR/bin:\
 $HOME/bin:$PACKER_DIR
 
-#Man path settings
+# Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man
 
