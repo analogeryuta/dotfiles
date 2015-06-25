@@ -17,6 +17,9 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 # Install path to Go
 export GOPATH=$HOME/.go
 
+# Install path to EC2 CLI tools
+export EC2_HOME=/usr/local/ec2-api-tools-1.7.4.0
+
 # Install path to Packer
 export PACKER_DIR=$HOME/bin/packer
 
@@ -33,7 +36,7 @@ fi
 # Install path settings
 export PATH=$PATH:$GOPATH/bin:\
 $JDK_DIR/bin:\
-$HOME/bin:$PACKER_DIR:$TERRAFORM_DIR
+$HOME/bin:$PACKER_DIR:$TERRAFORM_DIR:$EC2_HOME/bin
 
 # Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
