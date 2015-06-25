@@ -20,6 +20,7 @@ export GOPATH=$HOME/.go
 # Install path to EC2 CLI tools
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
 export EC2_JVM_ARGS="-Dhttps.proxyHost=proxy.occ.co.jp -Dhttps.proxyPort=8080"
+export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 
 # Install path to Packer
 export PACKER_DIR=$HOME/bin/packer
