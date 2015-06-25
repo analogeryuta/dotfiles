@@ -9,18 +9,15 @@ export PAGER=less
 export EDITOR='emacs -nw'
 
 # Install path to JDK(for Linux)
-export JAVA_HOME=/usr/local/jdk1.7.0_71
-
-# Install path to Scala
-export SCALA_DIR=/usr/local/scala-2.9.2
+#export JAVA_HOME=
 
 # Install path to Go
 export GOPATH=$HOME/.go
 
 # Install path to EC2 CLI tools
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
-export EC2_JVM_ARGS="-Dhttps.proxyHost=proxy.occ.co.jp -Dhttps.proxyPort=8080"
-export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
+export EC2_JVM_ARGS=""
+export EC2_URL="https://ec2.ap-northeast-1.amazonaws.com"
 
 # Install path to Packer
 export PACKER_DIR=$HOME/bin/packer
@@ -48,19 +45,15 @@ export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 #export DISPLAY=":0.0"
 
 #for proxy environment settings
-export http_proxy="http://proxy.occ.co.jp:8080"
-export https_proxy="http://proxy.occ.co.jp:8080"
+#export http_proxy=""
+#export https_proxy=""
 
 #for gyazo setting at work
-export GYAZO_HOST="gyazo.es.occ.co.jp"
+export GYAZO_HOST=""
 export GYAZO_CGI_PATH="/"
 
-#for SVN setup
-export SVNEDITOR="emacs -nw"
-export SVNROOT=""
-
 #for mercurial setup
-export HG_ROOT=""
+#export HG_ROOT=""
 
 #for github's git setup
 export GIT_ROOT="git@github.com:analogeryuta"
