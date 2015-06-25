@@ -9,7 +9,7 @@ export PAGER=less
 export EDITOR='emacs -nw'
 
 # Install path to JDK(for Linux)
-export JDK_DIR=/usr/local/jdk1.7.0_71
+export JAVA_HOME=/usr/local/jdk1.7.0_71
 
 # Install path to Scala
 export SCALA_DIR=/usr/local/scala-2.9.2
@@ -18,7 +18,8 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 export GOPATH=$HOME/.go
 
 # Install path to EC2 CLI tools
-export EC2_HOME=/usr/local/ec2-api-tools-1.7.4.0
+export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
+export EC2_JVM_ARGS="-Dhttps.proxyHost=proxy.occ.co.jp -Dhttps.proxyPort=8080"
 
 # Install path to Packer
 export PACKER_DIR=$HOME/bin/packer
@@ -35,7 +36,7 @@ fi
 
 # Install path settings
 export PATH=$PATH:$GOPATH/bin:\
-$JDK_DIR/bin:\
+$JAVA_HOME/bin:\
 $HOME/bin:$PACKER_DIR:$TERRAFORM_DIR:$EC2_HOME/bin
 
 # Man path settings
