@@ -6,7 +6,7 @@ export LC_TIME=C
 export LC_MESSAGES=C
 
 export PAGER=less
-export EDITOR='emacs -nw'
+export EDITOR='emacs'
 
 # Install path to JDK(for Linux)
 export JAVA_HOME=/usr/local/jdk1.7.0_71
