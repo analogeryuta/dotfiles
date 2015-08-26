@@ -16,6 +16,8 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 
 # Install path to Go
 export GOPATH=$HOME/.go
+export GOROOT=/usr/local/go
+export PATH=$GOROOT/bin:$GOPATH/bin
 
 # Install path to EC2 CLI tools
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
