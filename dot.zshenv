@@ -8,9 +8,6 @@ export LC_MESSAGES=C
 export PAGER=less
 export EDITOR='emacs -nw'
 
-# Install path to JDK(for Linux)
-#export JAVA_HOME=
-
 # Install path to Go
 export GOPATH=$HOME/.go
 
@@ -18,12 +15,6 @@ export GOPATH=$HOME/.go
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
 export EC2_JVM_ARGS=""
 export EC2_URL="https://ec2.ap-northeast-1.amazonaws.com"
-
-# Install path to Packer
-export PACKER_DIR=$HOME/bin/packer
-
-# Install path to Terraform
-export TERRAFORM_DIR=$HOME/bin/terraform
 
 # Docker(for OSX) setting.
 if [[ `uname` == 'Darwin' ]]; then
@@ -34,8 +25,7 @@ fi
 
 # Install path settings
 export PATH=$PATH:$GOPATH/bin:\
-$JAVA_HOME/bin:\
-$HOME/bin:$PACKER_DIR:$TERRAFORM_DIR:$EC2_HOME/bin
+$HOME/bin:$EC2_HOME/bin
 
 # Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
