@@ -17,7 +17,7 @@ export SCALA_DIR=/usr/local/scala-2.9.2
 # Install path to Go
 export GOPATH=$HOME/.go
 export GOROOT=/usr/local/go
-export PATH=$GOROOT/bin:$GOPATH/bin
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # Install path to EC2 CLI tools
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.4.0
@@ -29,13 +29,6 @@ export PACKER_DIR=$HOME/bin/packer
 
 # Install path to Terraform
 export TERRAFORM_DIR=$HOME/bin/terraform
-
-# Docker(for OSX) setting.
-if [[ `uname` == 'Darwin' ]]; then
-   export DOCKER_HOST=tcp://192.168.59.103:2376
-   export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-   export DOCKER_TLS_VERIFY=1
-fi
 
 # Install path settings
 export PATH=$PATH:$GOPATH/bin:\
@@ -66,6 +59,11 @@ export HG_ROOT=""
 
 #for github's git setup
 export GIT_ROOT="git@github.com:analogeryuta"
+
+# for linuxbrew setting
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 #for rbenv setting
 export PATH=$HOME/.rbenv/bin:$PATH
