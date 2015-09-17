@@ -6,7 +6,7 @@ export LC_TIME=C
 export LC_MESSAGES=C
 
 export PAGER=less
-export EDITOR='emacs'
+export EDITOR='emacs -nw'
 
 # Install path to JDK(for Linux)
 export JAVA_HOME=/usr/local/jdk1.7.0_71
@@ -46,8 +46,8 @@ export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 export http_proxy="http://proxy.occ.co.jp:8080"
 export https_proxy="http://proxy.occ.co.jp:8080"
 
-#for gyazo setting at work
-export GYAZO_HOST="gyazo.es.occ.co.jp"
+#for gyazo(and gyazo-cli) setting at work
+export GYAZO_SERVER_URL="http://gyazo.es.occ.co.jp"
 export GYAZO_CGI_PATH="/"
 
 #for SVN setup
