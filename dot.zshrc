@@ -64,8 +64,5 @@ if [[ $LANG == "ja_JP.UTF-8" ]]; then
     alias java="java -Dfile.encoding=UTF-8"
 fi
 
-#for AWS CLI setting
-source `where aws_zsh_completer.sh`
-
 #for direnv setting.
 eval "$(direnv hook zsh)"
