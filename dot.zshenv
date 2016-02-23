@@ -49,6 +49,11 @@ export PATH=$HOME/.rbenv/shims:$PATH
 source $HOME/.rbenv/completions/rbenv.zsh
 export RBENV_SHELL=zsh
 
+#for pyenv setting
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
+
+
 # rbenv command wrapper
 rbenv rehash 2>/dev/null
 rbenv() {
@@ -65,3 +70,6 @@ rbenv() {
     command rbenv "$command" "$@";;
   esac
 }
+
+# pyenv eval function for command wrapping settings.
+eval "$(pyenv init -)"
