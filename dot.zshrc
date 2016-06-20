@@ -1,4 +1,5 @@
 ## zsh setting ##
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 setopt auto_pushd
