@@ -38,21 +38,15 @@ export GYAZO_CGI_PATH="/"
 #for github's git setup
 export GIT_ROOT="git@github.com:analogeryuta"
 
-# for linuxbrew setting
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
 #for rbenv setting
-export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=$HOME/.rbenv/shims:$PATH
-source $HOME/.rbenv/completions/rbenv.zsh
+#export PATH=$HOME/.rbenv/bin:$PATH
+#export PATH=$HOME/.rbenv/shims:$PATH
+#source $HOME/.rbenv/completions/rbenv.zsh
 export RBENV_SHELL=zsh
 
 #for pyenv setting
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="$HOME/.pyenv/shims:$PATH"
-
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#export PATH="$HOME/.pyenv/shims:$PATH"
 
 # rbenv command wrapper
 rbenv rehash 2>/dev/null
