@@ -66,4 +66,4 @@ rbenv() {
 }
 
 # pyenv eval function for command wrapping settings.
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
