@@ -77,7 +77,7 @@ alias ls="ls -FGv"
 alias df="df -m"
 alias du="du -h"
 alias editrst='$EDITOR `date +%Y%m%d`.rst'
-alias open="x-www-browser"
+#alias open="x-www-browser"
 alias emacs="emacs -nw"
 
 #java(とその他)の設定
@@ -87,5 +87,31 @@ if [[ $LANG == "ja_JP.UTF-8" ]]; then
     alias java="java -Dfile.encoding=UTF-8"
 fi
 
+#for rbenv setting
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
+#source $HOME/.rbenv/completions/rbenv.zsh
+export RBENV_SHELL=zsh
+
+# rbenv command wrapper
+rbenv rehash 2>/dev/null
+rbenv() {
+  local command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "`rbenv "sh-$command" "$@"`";;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
+
 #for direnv setting.
 eval "$(direnv hook zsh)"
+
+# pyenv eval function for command wrapping settings.
+eval "$(pyenv init -)"

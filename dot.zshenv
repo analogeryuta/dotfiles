@@ -8,21 +8,6 @@ export LC_MESSAGES=C
 export PAGER=less
 export EDITOR='emacs -nw'
 
-# Install path to Go
-export GOPATH=$HOME/.go
-export GOROOT=/usr/local/go
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
-
-# Install path to Packer
-export PACKER_DIR=$HOME/bin/packer
-
-# Install path to Terraform
-export TERRAFORM_DIR=$HOME/bin/terraform
-
-# Install path settings
-export PATH=$PATH:$GOPATH/bin:\
-$HOME/bin:$PACKER_DIR:$TERRAFORM_DIR
-
 # Man path settings
 export MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:\
 /usr/X11/man:/usr/X11/share/man
@@ -38,32 +23,6 @@ export GYAZO_CGI_PATH="/"
 #for github's git setup
 export GIT_ROOT="git@github.com:analogeryuta"
 
-#for rbenv setting
-#export PATH=$HOME/.rbenv/bin:$PATH
-#export PATH=$HOME/.rbenv/shims:$PATH
-#source $HOME/.rbenv/completions/rbenv.zsh
-export RBENV_SHELL=zsh
+#for ~/bin
+export PATH=$PATH:$HOME/bin
 
-#for pyenv setting
-#export PATH="$HOME/.pyenv/bin:$PATH"
-#export PATH="$HOME/.pyenv/shims:$PATH"
-
-# rbenv command wrapper
-rbenv rehash 2>/dev/null
-rbenv() {
-  local command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
-
-  case "$command" in
-  rehash|shell)
-    eval "`rbenv "sh-$command" "$@"`";;
-  *)
-    command rbenv "$command" "$@";;
-  esac
-}
-
-# pyenv eval function for command wrapping settings.
-#eval "$(pyenv init -)"
