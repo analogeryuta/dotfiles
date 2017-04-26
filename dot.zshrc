@@ -1,4 +1,5 @@
 ## zsh setting ##
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 setopt auto_pushd
@@ -11,6 +12,28 @@ bindkey -e
 HISTFILE=$HOME/.histfile
 HISTSIZE=3000
 SAVEHIST=3000
+
+## for ssh-agent settings
+SSH_ENV=$HOME/.ssh/environment
+ 
+function start_ssh_agent {
+     ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
+     chmod 0600 ${SSH_ENV}
+     . ${SSH_ENV} > /dev/null
+     ssh-add
+}
+
+# Source SSH agent settings if it is already running, otherwise start
+# up the agent proprely.
+if [ -f "${SSH_ENV}" ]; then
+     . ${SSH_ENV} > /dev/null
+     # ps ${SSH_AGENT_PID} doesn't work under cywgin
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+         start_ssh_agent
+     }
+else
+     start_ssh_agent
+fi
 
 ##補完候補のカーソル選択を有効に
 zstyle ':completion:*:default' menu select=1
@@ -54,34 +77,41 @@ alias ls="ls -FGv"
 alias df="df -m"
 alias du="du -h"
 alias editrst='$EDITOR `date +%Y%m%d`.rst'
-
-if [[ -f /usr/local/bin/less ]]; then
-    alias less="/usr/local/bin/less"
-fi
-if [[ -f /usr/local/bin/grep ]]; then
-    alias grep="/usr/local/bin/grep"
-    alias egrep="/usr/local/bin/egrep"
-    alias fgrep="/usr/local/bin/fgrep"
-fi
-if [[ -f /usr/local/bin/emacs ]]; then
-    alias emacs="/usr/local/bin/emacs -nw"
-    alias etags="/usr/local/bin/etags"
-fi
-if [[ -f /usr/local/bin/vim ]]; then
-    alias vim="/usr/local/bin/vim"
-    alias vi="/usr/local/bin/vim"
-fi
+#alias open="x-www-browser"
+alias emacs="emacs -nw"
 
 #java(とその他)の設定
 if [[ $LANG == "ja_JP.UTF-8" ]]; then
     export LESSCHARSET=utf-8
     alias javac="javac -J-Dfile.encoding=UTF-8"
     alias java="java -Dfile.encoding=UTF-8"
-elif [[ $LANG == "ja_JP.eucJP" ]]; then
-    export LESSCHARSET=euc-jp
-    alias javac="javac -J-Dfile.encoding=euc-jp"
-    alias java="java -Dfile.encoding=euc-jp"
 fi
+
+#for rbenv setting
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
+#source $HOME/.rbenv/completions/rbenv.zsh
+export RBENV_SHELL=zsh
+
+# rbenv command wrapper
+rbenv rehash 2>/dev/null
+rbenv() {
+  local command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "`rbenv "sh-$command" "$@"`";;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
 
 #for direnv setting.
 eval "$(direnv hook zsh)"
+
+# pyenv eval function for command wrapping settings.
+eval "$(pyenv init -)"
