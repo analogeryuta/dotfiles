@@ -115,3 +115,6 @@ eval "$(direnv hook zsh)"
 
 # pyenv eval function for command wrapping settings.
 eval "$(pyenv init -)"
+
+# add brew's installed sbin executes path.
+export PATH="/usr/local/sbin:$PATH"
