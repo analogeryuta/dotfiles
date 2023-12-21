@@ -111,7 +111,11 @@ rbenv() {
 }
 
 #for direnv setting.
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 
 # add brew's installed sbin executes path.
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/local/sbin:$PATH"
+
+#autoload -U +X bashcompinit && bashcompinit
+#complete -o nospace -C /opt/local/bin/terraform terraform
+
